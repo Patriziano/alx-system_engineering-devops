@@ -41,13 +41,3 @@ def print_results(counts):
     for word, count in sorted_counts:
         if count > 0:
             print(f"{word}: {count}")
-
-if __name__ == "__main__":
-    import sys
-
-    if len(sys.argv) < 3:
-        print("Usage: {} <subreddit> <list of keywords>".format(sys.argv[0]))
-        print("Ex: {} programming 'python java javascript'".format(sys.argv[0]))
-    else:
-        count_words(sys.argv[1], [x for x in sys.argv[2].split()])
-
